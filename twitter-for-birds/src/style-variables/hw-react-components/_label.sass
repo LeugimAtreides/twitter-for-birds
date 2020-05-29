@@ -1,0 +1,13 @@
+@import "../_colors"
+@import "../_sizes"
+
+.hwui-Label
+  font-weight: $font-weight-medium
+  color: $default-shade-1
+
+.hwui-Form__required
+  .hwui-Label__required
+    &:after
+      content: " *"
+      color: $danger
+      font-weight: $font-weight-bold

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="22px" viewBox="0 0 66 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="9.543 66.423 9.543 0.0003 0.0006 0.0003 0.0006 66.423"></polygon>
+    </defs>
+    <g id="Homepage-v1---Brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-532.000000, -2281.000000)">
+        <g id="iphone" transform="translate(261.000000, 2149.000000)">
+            <g id="Page-1" transform="translate(304.498068, 145.575976) scale(-1, 1) rotate(107.000000) translate(-304.498068, -145.575976) translate(299.498068, 112.075976)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M1.7326,0 C1.7326,0 -2.9154,30.75 4.4956,64.111 C3.9616,63.798 1.6686,62.066 0.6406,61.553 L0.0006,62.521 C0.9716,63.007 1.6876,63.484 2.4466,63.99 C3.1966,64.49 5.6206,66.423 5.6206,66.423 L9.5436,61.202 L8.5586,60.482 L5.6056,64.486 C-1.9614,30.891 2.7146,0.184 2.7146,0.184 L1.7326,0 Z" id="Fill-1" fill="#838BC5" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

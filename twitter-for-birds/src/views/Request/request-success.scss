@@ -1,0 +1,99 @@
+@import "../../style-variables/_colors";
+@import "../../style-variables/_sizes.sass";
+@import "../../style-variables/_utils.sass";
+
+.scheduling__success {
+    padding: $padding-lg 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .calendar-icon {
+        color: $twilight-blue;
+        font-size: 250px;
+    }
+
+    .hwui-Button {
+        margin: $margin-sm auto $margin-md auto;
+        position: relative;
+        padding-right: $margin-md;
+        background-color: $twilight-blue;
+
+        &:hover {
+            transition: all 0.2s ease-in;
+            background-color: $primary;
+        }
+
+        .fa {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translate(0, -50%);
+            margin-top: $margin-space;
+        }
+    }
+
+    .hwui-PageTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: $margin-md;
+        color: $success-shade3;
+    }
+
+    .content-body {
+        display: flex;
+        flex-flow: column;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    .page-header.standard {
+        padding: $padding-lg 0;
+
+        .page-title {
+            text-align: center;
+        }
+    }
+
+    .main {
+        align-items: center;
+        margin: 0 auto $margin-lg;
+        display: flex;
+
+        @media screen and (max-width: $tablet) {
+            padding-top: 0;
+            display: block;
+        }
+
+        .text-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .request-note {
+            max-width: 50%;
+            @media screen and (max-width: $tablet-sm) {
+                max-width: 75%;
+            }
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin: auto;
+        }
+
+        .practice-details .location {
+            margin: 0;
+            padding: 0;
+
+            .address {
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}

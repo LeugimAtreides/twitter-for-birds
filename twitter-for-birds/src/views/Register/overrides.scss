@@ -1,0 +1,34 @@
+// Forn Ovverrides
+ul.hwui-ProfilePicker__nav--list {
+  list-style-type: none;
+}
+.hwui-FormInput input {
+  width: 90%;
+}
+.hwui-SectionTitle {
+  font-size: 1.25rem;
+  color: #0e5d56;
+  font-weight: 500;
+}
+.hwui-RegisterForm .hwui-Form main h3 {
+  color: #0e5d56;
+  margin: 32px 0;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.hwui-RegisterConfirm__Header h1 {
+  color: #0e5d56;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.hwui-RegisterConfirm__Appointment-Card {
+  font-weight: 400;
+}
+.hwui-RegisterConfirm__Appointment-Card h2 {
+  font-weight: 500;
+}
+p.hwui-RegisterConfirm__detail-group--title {
+  font-weight: 500;
+}

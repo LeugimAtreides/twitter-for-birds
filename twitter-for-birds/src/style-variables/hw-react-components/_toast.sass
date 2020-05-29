@@ -1,0 +1,110 @@
+@import "../_sizes"
+@import "../_screens"
+@import "../_colors"
+
+.hwui-ToastContainer
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 100
+
+.hwui-Toast
+  display: flex
+  align-items: center
+  border-radius: $border-radius
+  overflow: hidden
+  box-shadow: 0 1px 3px 0 $toast-box-shadow
+  max-width: 360px
+  min-width: 360px
+  min-height: 50px
+  margin: $margin-xsm
+  background: $toast-bg
+  -webkit-animation: notify .25s linear
+  animation: notify .25s linear
+
+  @media screen and (max-width: $phone)
+    width: 100%
+    max-width: 100%
+    min-width: 100%
+    border-radius: 0
+    margin: 0
+
+  &__status
+    position: relative
+    align-self: stretch
+    width: 60px
+    min-width: 50px
+    max-width: 50px
+    min-height: 100%
+    max-height: 100%
+    background: $toast-status-bg
+
+    @media screen and (max-width: $phone)
+      min-width: 25px
+      min-height: 25px
+
+    &:before
+      content: "\f05a"
+      font-family: "Font Awesome 5 pro"
+      font-weight: $font-weight-semi-bold
+      font-size: $font-size-md
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      color: $toast-bg
+
+    &--success
+      background: $toast-success-bg
+
+      &:before
+        content: "\f058"
+
+
+    &--warning
+      background: $toast-warning-bg
+
+      &:before
+        content: "\f071"
+
+    &--danger
+      background: $toast-danger-bg
+
+      &:before
+        content: "\f057"
+
+  &__content
+    width: 100%
+    padding: $padding-sm
+    font-size: $font-size-xsm
+
+
+    strong
+      font-weight: $font-weight-semi-bold
+
+    @media screen and (max-width: $phone)
+      padding: $padding-xxsm $padding-sm
+
+  &__close
+    font-size: $font-size-mobile-xlg
+    font-weight: $font-weight-regular
+    color: $toast-close
+    padding: 0 $padding-sm
+    cursor: pointer
+
+@-webkit-keyframes notify
+  from
+    opacity: 0
+    transform: translateX(100%)
+  to
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes notify
+  from
+    opacity: 0
+    transform: translateX(100%)
+  to
+    opacity: 1
+    transform: translateX(0)

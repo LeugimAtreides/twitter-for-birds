@@ -1,0 +1,45 @@
+@import "../_colors"
+@import "../_sizes"
+@import "../_screens"
+@import "../_utils"
+@import "../_fonts"
+
+.hwui-StepAnchor
+  display: block
+  position: relative
+  cursor: pointer
+  font-size: $font-size-mobile-md
+  color: $primary-shade-1
+  height: 55px
+  width: calc(100% + 2px)
+  overflow: hidden
+
+  &__content
+    transition: all .25s ease-in-out
+    display: block
+
+  &__container
+    transition: all .25s ease-in-out
+    display: flex
+    position: absolute
+    left: -200%
+    margin: $margin-xxsm 0
+
+  &--open
+
+    .hwui-StepAnchor__container
+      left: 0
+
+    .hwui-StepAnchor__content
+      visibility: hidden
+      opacity: 0
+      height: 0
+
+    .hwui-Button
+        font-weight: $font-weight-semi-bold
+        width: calc(50% - 5px)
+
+        &:first-child
+            margin-right: $margin-xsm
+    .hwui-Button__size-sm
+        padding: $padding-space $padding-xsm

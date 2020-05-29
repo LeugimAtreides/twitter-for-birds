@@ -1,0 +1,74 @@
+@import "../_sizes"
+@import "../_screens"
+@import "../_colors"
+
+.hwui-Tooltip
+  position: relative
+  display: inline-block
+
+  .fa
+    color: $tooltip-questionicon-bg
+    font-size: $font-size-xsm
+    margin-left: 5px
+
+  &__tip
+    transition: all .25s ease-in-out
+    display: block
+    visibility: hidden
+    opacity: 0
+    background: $tooltip-bg
+    border: $border-width solid $tooltip-border-color
+    border-radius: $border-radius
+    box-shadow: 0 0 15px -4px $default-shade1
+    padding: $padding-xxxsm $padding-sm
+    z-index: 2
+
+    &--visible
+      visibility: visible
+      opacity: 1
+
+      .hwui-Tooltip__body--copy,
+      .hwui-Tooltip__body--title
+        display: block
+
+  &__pointer
+    width: 10px
+    height: 10px
+    transform: translate(-$padding-sm, 0)
+
+    &--top
+      transform: rotate(90deg) translate(-$padding-xxxsm, -1px)
+
+  &__pointer:after,
+  &__pointer:before
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-100%, -50%)
+      width: 0
+      height: 0
+      border-style: solid
+
+  &__pointer:after
+      top: 8px
+      border-color:  transparent $tooltip-bg transparent transparent
+      border-width: 8px
+
+  &__pointer:before
+      top: 8px
+      border-color: transparent $tooltip-border-color transparent transparent
+      border-width: 9px
+
+  &__body
+    padding: $padding-space
+    overflow: auto
+    height: 100%
+
+    &--copy
+      font-size: $font-size-xsm
+      font-weight: $font-weight-regular
+      color: $tooltip-copy
+      white-space: pre-wrap
+
+      @media screen and (max-width: $phone)
+        font-size: $font-size-xsm

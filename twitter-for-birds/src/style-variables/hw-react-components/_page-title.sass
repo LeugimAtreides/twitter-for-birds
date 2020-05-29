@@ -1,0 +1,22 @@
+@import "../_colors"
+@import "../_sizes"
+@import "../_screens"
+
+.hwui-PageTitle
+  color: $text-shade-2
+  margin: $margin-smed 0
+
+  &__size
+
+    &--md,
+    &--lg
+      font-size: $font-size-xlg
+      font-weight: $font-weight-medium
+
+      @media screen and (max-width: $tablet-sm)
+        font-size: $font-size-lg
+        margin: $margin-sm 0
+      
+      @media print
+        font-size: $font-size-md
+        margin: $margin-xsm 0

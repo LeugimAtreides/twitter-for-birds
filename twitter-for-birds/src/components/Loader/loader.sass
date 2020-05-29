@@ -1,0 +1,64 @@
+
+@import "../../style-variables/_utils"
+@import "../../style-variables/_colors"
+
+@keyframes deaui-ripple
+  0%
+  top: 30px
+    left: 30px
+    width: 0
+    height: 0
+    border-color: rgba($primary, 1)
+  100%
+  top: 0
+    left: 0
+    width: 60px
+    height: 60px
+    border-color: rgba($primary, 0)
+
+.deaui-Loading
+  position: absolute
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background: rgba($secondary-shade1, 0.4)
+  width: 100%
+  height: 100%
+  z-index: 3
+  top: 0
+  left: 0
+
+  &__fixed
+    position: fixed
+
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  &__spinner
+    color: $input-icon-color
+
+  &__ripple
+    position: relative
+    width: 60px
+    height: 60px
+    font-size: 3rem
+
+    div
+      box-sizing: content-box
+      position: absolute
+      border: 1.5px solid rgba($primary, 1)
+      border-radius: 50%
+      -webkit-animation: deaui-ripple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite
+      animation: deaui-ripple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite
+
+      &:nth-child(2)
+        -webkit-animation-delay: -1s
+        animation-delay: -1s
+
+  h1
+    color: $primary
+    font-size: $font-size-md

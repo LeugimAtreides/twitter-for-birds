@@ -1,0 +1,121 @@
+@import "../../../style-variables/_colors.sass";
+@import "../../../style-variables/_sizes.sass";
+@import "../../../style-variables/_utils";
+
+.appointment-picker {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: flex-end;
+    margin-right: $margin-md;
+
+    @media screen and (max-width: $desktop){
+        flex-flow: column;
+        justify-content: center;
+        flex-grow: 2;
+        flex-shrink: 2;
+        align-self: center;
+    }
+
+    @media screen and (max-width: $phone){
+        margin-right: 0
+    }
+}
+
+.day-picker {
+    background-color: $twilight-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius;
+    color: $secondary;
+    height: 35px;
+    vertical-align: middle;
+
+    @media screen and (max-width: $desktop){
+        width: auto;
+    }
+
+    &--day {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        font-size: $font-size-xsm;
+        font-weight: $font-weight-semi-bold;
+  
+        span {
+            padding-left: $padding-md;
+        }
+    }
+
+    &--nextday,
+    &--previousday {
+        display: inline-block;
+        width: 5%;
+        font-size: 20px;
+        margin: $margin-xxsm;
+        cursor: pointer;
+        color: $secondary;
+    }
+
+    &--nextday-inactive,
+    &--previousday-inactive {
+        display: inline-block;
+        width: 5%;
+        font-size: 20px;
+        margin: $margin-xxsm;
+        color: $success-shade-3;
+        vertical-align: middle;
+    }
+}
+
+.appointment-times {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &--time {
+        background-color: $turtle-green;
+        display: flex;
+        flex-direction: column;
+        padding: $padding-xxsm $padding-xsm;
+        flex: 1 1 auto;
+        text-align: center;
+        cursor: pointer;
+        margin: $margin-xxsm $margin-xxsm $margin-xxsm 0;
+        color: $secondary;
+        border-radius: $border-radius;
+        @media screen and (max-width: $tablet-sm){
+            padding: $padding-xxsm #{$padding-xsm / 2};
+        };    
+    }
+
+    &--all {
+        background-color: $water-blue;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        font-weight: $font-weight-bold;
+        padding: $padding-xxsm $padding-sm;
+        text-align: center;
+        cursor: pointer;
+        margin: $margin-xxsm 0 $margin-xxsm 0;
+        color: $secondary;
+        border-radius: $border-radius;
+        @media screen and (max-width: $phone){
+            padding: $padding-space
+        }
+  }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}

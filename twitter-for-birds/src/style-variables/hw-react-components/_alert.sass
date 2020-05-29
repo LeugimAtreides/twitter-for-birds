@@ -1,0 +1,28 @@
+@import "../_colors"
+@import "../_sizes"
+@import "../_screens"
+
+.hwui-Alert
+  border: $border-width solid $default
+  padding: $padding-sm
+  border-radius: $border-radius
+  margin: $margin-sm 0
+
+  b
+    font-weight: $font-weight-medium
+
+  .hwui-Alert__title
+    font-size: $font-size-md
+    font-weight: $font-weight-bold
+
+  .hwui-Alert__body
+    word-wrap: break-word
+    margin: 0
+
+  &__success
+    border: $border-width solid $success
+    color: $success
+
+  &__danger
+    border: $border-width solid $danger
+    color: $danger

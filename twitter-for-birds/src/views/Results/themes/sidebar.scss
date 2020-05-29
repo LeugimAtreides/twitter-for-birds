@@ -1,0 +1,36 @@
+@import "../../../../node_modules/@fortawesome/fontawesome-pro/scss/_variables";
+@import "../../../style-variables/_colors";
+@import "../../../style-variables/_utils";
+@import "../../../style-variables/_sizes";
+
+.results-Sidebar {
+    padding: $padding-sm;
+
+    &__filters--side {
+        background: $secondary;
+        width: 40%;
+        border-right: $border-width solid $default-shade1;
+
+        @media screen and (max-width: $desktop) {
+            position: absolute;
+            width: 100%;
+            left: -100%;
+            top: 0;
+            transition: all .2s ease-in-out
+        }
+    }
+
+    &__filters--open {
+        display: flex;
+        flex-flow: column;
+        overflow: auto;
+        padding-bottom: $padding-xxlg;
+        top: 0;
+        left: 0;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        transition: all .2s ease-in-out;
+        z-index: 2;
+    }
+}

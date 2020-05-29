@@ -1,0 +1,237 @@
+@import "../../../style-variables/_colors.sass";
+@import "../../../style-variables/_screens.sass";
+@import "../../../style-variables//_sizes.sass";
+
+.deaui-ProviderResults {
+    display: flex;
+    flex-flow: row;
+    background-color: $secondary;
+    border-radius: $border-radius;
+    border: $border-width solid $default-shade1;
+    margin: $margin-sm;
+    padding: $padding-sm;
+
+    @media screen and (max-width: $desktop) {
+        width: auto;
+        flex-flow: column;
+    }
+
+    @media screen and (max-width: $phone) {
+        padding: $font-size-sm;
+    }
+
+    &__No-Request,
+    &__No-Online-Availability {
+        display: flex;
+  
+        @media screen and (max-width: $tablet-sm){
+            display: block;
+
+        }
+  
+  
+        button {
+            margin-bottom: $padding-xxsm;
+            @media screen and (max-width: $tablet-sm) {
+                width: 100%;
+            }
+    
+            &:first-of-type {
+                display: block;
+                margin-right: $padding-xxsm;
+                @media screen and (max-width: $tablet-sm){
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__more {
+        span {
+            @media screen and (max-width: $tablet) {
+                display: none
+            }
+        }
+    }
+
+    &__general {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+  
+        @media screen and (max-width: $desktop){
+            display: block;
+        }
+  
+        @media screen and (max-width: $tablet){
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+    }
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-left: auto;
+        min-width: 280px;
+        max-width: $phone;
+  
+        .deaui-Loading,
+        .deaui-Loading.absolute {
+            position: static;
+            height: 50px;
+            width: 50px;
+            margin-left: auto;
+            background: transparent;
+    
+            @media screen and (max-width: $desktop){
+                margin: 0 auto;
+            }
+    
+            &__loader,
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+  
+        &--none {
+            display: block;
+            padding: $padding-xsm 0;
+            background: $secondary;
+            border: $border-width solid $default-shade1;
+            text-align: center;
+            border-radius: $border-radius;
+
+            a {
+                font-size: $font-size-sm
+            }
+
+            @media screen and (max-width: $desktop){
+                max-width: none;
+                width: 100%;
+                padding: $padding-space 0;
+            }
+        }
+  
+        &--enable {
+            color: $secondary;
+            font-weight: $font-weight-semi-bold;
+            display: block;
+            padding: $padding-xsm $padding-sm;
+            background: $success-shade2;
+            border: $border-width solid $success;
+            text-align: center;
+            border-radius: $border-radius;
+            @media screen and (max-width: $desktop){
+                max-width: none;
+                width: 100%;
+            }
+        }
+  
+        .hwui-Button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: $font-weight-medium;
+            width: 100%;
+    
+            @media screen and (max-width: $desktop){
+                max-width: none;
+                width: 100%;
+            }
+    
+            @media screen and (max-width: $phone){
+                font-size: $font-size-xsm;
+                justify-content: space-between;
+                padding: $padding-xsm;
+            }
+    
+            &__type-success {
+                background: $success;
+                flex-direction: column;
+                justify-content: space-between;
+      
+                &:hover {
+                    background: darken($success, 10%);
+                }
+      
+                span:last-child {
+                    display: flex;
+                    align-items: center;
+                    font-size: $font-size-xsm;
+                    text-transform: uppercase;
+                }
+            }
+    
+            small {
+                display: block;
+                font-size: $font-size-xsm;
+            }
+    
+            span {
+                font-size: $font-size-md;
+                font-weight: $font-weight-regular;
+      
+                @media screen and (max-width: $phone) {
+                    font-size: $font-size-xsm;
+                }
+      
+                b {
+                    font-weight: $font-weight-medium;
+                }
+            }
+    
+            .fa {
+                font-size: 22px;
+                margin-left: $margin-sm;
+            }
+
+        }
+
+    }
+
+    &__Appointments {
+        justify-content: center;
+        max-width: 50%;
+        width: 50%;
+  
+        @media screen and (max-width: $desktop){
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            max-width: 100%;
+            width: 100%;
+        }
+  
+        &--picker {
+            position: relative;
+            width: 100%;
+            min-height: 50px;
+        }
+  
+        .hwui-Button__size-md {
+            width: 100%;
+        }
+  
+        .hwui-Button {
+            padding: $padding-xsm;
+        }
+    }
+
+    &__Profile {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 auto;
+        justify-content: flex-start;
+  
+        @media screen and (max-width:$desktop){
+            flex-direction: column;
+        }
+    }
+}

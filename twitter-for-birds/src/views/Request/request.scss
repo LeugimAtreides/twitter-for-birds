@@ -1,0 +1,171 @@
+@import "../../style-variables/_colors";
+@import "../../style-variables/_sizes";
+@import "../../style-variables/_utils";
+
+.deaui-Request {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    box-sizing : border-box;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+
+    &__Title {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &--header {
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+            margin: $margin-sm auto $margin-sm auto;
+            font-weight: $font-weight-lightest;
+            font-size: 2.85rem;
+            background: $water-blue;
+            color: $primary-shade2;
+        }
+        
+        &--command {
+            margin: $margin-sm auto $margin-sm auto;
+            width: 60%;
+            font-weight: $font-weight-light;
+            font-size: 1.5rem;
+            color: $primary;
+        }
+        
+        &--provider-name {
+            margin: $margin-sm auto $margin-sm auto;
+            width: 60%;
+            font-weight: $font-weight-medium;
+            font-size: 1rem;
+        }
+        
+        &--required-message {
+            width: 60%;
+            margin: $margin-sm auto $margin-sm auto;
+            font-size: 1.125rem;
+            font-weight: $font-weight-lightest;
+
+            &--notice {
+                color: $danger;
+                font-size: 1.5rem;
+            }
+            
+        }
+    }
+
+    &__ProfilePicker {
+        width: 100%;
+        
+        &__nav {
+            width: 60%;
+            margin: $margin-sm auto $margin-sm auto;
+
+            &--list {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    padding: $padding-xxsm;
+                    list-style: none;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    &:last-child a {
+                        font-size: $font-size-xsm;
+                    }
+
+                    p {
+                        position: relative;
+                        display: block;
+                        width: 60px;
+                        height: 60px;
+                        cursor: pointer;
+                        background: $primary;
+                        color: $secondary;
+                        font-size: $font-size-sm;
+                        font-weight: $font-weight-medium;
+                        border-radius: 100%;
+                        outline: none;
+
+                        span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        &.is-active {
+                            background: $secondary;
+                            color: $primary;
+                            box-shadow: inset 0 0 0 $border-width $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &__Gender {
+        width: 60%;
+        margin: $margin-sm auto $margin-sm auto;
+        display: flex;
+        flex-direction: column;
+
+        &--radios {
+            width: 20%;
+            margin-top: $margin-sm;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+    &__Preferred-Contact-Method {
+        width: 60%;
+        margin: $margin-sm auto $margin-sm auto;
+        display: flex;
+        flex-direction: column;
+        
+        &--radios {
+            width: 20%;
+            margin-top: $margin-sm;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+    }
+    
+    &__Appointment-Preferences {
+        width: 60%;
+        margin: $margin-sm auto $margin-sm auto;
+        display: flex;
+        flex-direction: column;
+        height: 16rem;
+        justify-content: space-between;
+
+        &--selector-field {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 6rem;
+            justify-content: space-evenly;
+        }
+
+        &--selector-group {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+    }
+
+}

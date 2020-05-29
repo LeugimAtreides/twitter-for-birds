@@ -1,0 +1,13 @@
+@import "../../style-variables/_sizes"
+@import "../../style-variables/_utils"
+@import "../../style-variables/_colors"
+
+.base
+  display: flex
+  flex-direction: row
+  width: fit-content
+
+  @media screen and (max-width: $phone)
+    flex-direction: column
+    width: 100%
+    align-items: center

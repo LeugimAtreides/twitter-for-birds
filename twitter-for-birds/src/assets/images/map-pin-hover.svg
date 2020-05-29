@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="37px" viewBox="0 0 26 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>pin [yellow]</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.5033892,36.1472312 C4.16779642,28.1282744 3.133923e-16,20.6512331 0,13.7161075 C0,3.31341912 7.17845244,0.511115579 13.3132755,0.511115579 C19.4480986,0.511115579 25.7953814,4.06393612 25.7953814,13.7161075 C25.7953814,20.1508885 21.3647174,27.6279297 12.5033892,36.1472312 Z" id="path-1"></path>
+    </defs>
+    <g id="CC-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Centra-Care-Scheduling-1" transform="translate(-867.000000, -317.000000)">
+            <g id="map" transform="translate(581.000000, 138.000000)">
+                <g id="pin-[yellow]" transform="translate(286.000000, 179.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#DA8700" xlink:href="#path-1"></use>
+                    <circle id="Oval" fill="#FFFFFF" mask="url(#mask-2)" cx="13" cy="13.5294118" r="5.35294118"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

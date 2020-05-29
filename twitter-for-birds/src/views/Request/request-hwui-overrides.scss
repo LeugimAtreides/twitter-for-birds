@@ -1,0 +1,146 @@
+@import '../../style-variables/_colors.sass';
+@import '../../style-variables/_screens.sass';
+@import '../../style-variables/_utils.sass';
+@import '../../style-variables/_sizes.sass';
+
+.deaui-Request {
+    .hwui-Form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+        &__required-message {
+            display: none;
+        }
+    
+        .hwui-SectionTitle {
+            font-weight: $font-weight-light;
+            font-size: 1.5rem;
+            color: $primary;
+        }
+    
+        .hwui-Label {
+            font-size: $font-size-lg
+        }
+    
+        .hwui-FormInput {
+            width: 60%;
+            margin: $margin-sm auto $margin-sm auto;
+    
+            &__label {
+                font-size: $font-size-lg;
+            }
+    
+            input {
+                height: 60px;
+                width: 97%;
+                font-size: $font-size-md;
+                border-radius: 8px;
+                background-color: whitesmoke;
+                border: solid 1px #666666;
+            }
+    
+        }
+        
+        .hwui-Checkbox {
+            width: 60%;
+            margin: $margin-sm auto $margin-sm auto;
+    
+            .hwui-Label {
+                font-size: $font-size-md;
+                width: 100%;
+            }
+        }
+    
+        .hwui-Button {
+            &__type-info {
+                width: 8rem;
+                position: relative;
+                left: 23.8rem;
+                border-radius: 4px;
+                font-size: 16px;
+                font-weight: $font-weight-bold;
+            }
+    
+            &__type-default {
+                color: $secondary-shade-1;
+                font-weight: $font-weight-bold;
+                font-size: 16px;
+                text-align: center;
+                border-color: $secondary-shade-1;
+                box-shadow: 5px 1px 30px rgba(0,0,0,0.05);
+                border-style: solid;
+                border-width: 2px;
+                margin-right: $margin-sm;
+                transition: all 0.1s ease-in;
+                
+                &:hover {
+                    transition: all 0.1s ease-in;
+                    color: $turtle-green;
+                    border-color: $turtle-green;
+                }
+            }
+            
+            &__type-success {
+                font-weight: $font-weight-bold;
+                margin-right: $margin-sm;
+                box-shadow: 5px 1px 30px rgba(0,0,0,0.05);
+                border-style: solid;
+                border-width: 2px;
+                border-color: #84bd00;
+                color: white;
+                font-size: 16px;
+                border: none;
+                border-radius: 4px;
+                transition: all 0.1s ease-in;
+    
+                &:hover {
+                    background-color: $success-shade3;
+                }
+    
+                &:focus {
+                    transition: all 0.2s ease-in;
+                    background-color: $success-shade3;
+                }
+            }
+        }
+    
+        .hwui-FormTextArea {
+            width: 60%;
+            margin: $margin-sm auto $margin-sm auto;
+    
+            textarea {
+                width: 97%;
+                border-radius: 8px;
+                background-color: whitesmoke;
+                border: solid 1px #666666;
+            }
+    
+        }
+    
+        .hwui-Select__container {
+            width: 60%;
+            margin: $margin-sm auto $margin-lg auto;
+            height: 60px;
+    
+            .hwui-Select--has-label {
+                height: 60px;
+                border-radius: 8px;
+                background-color: whitesmoke;
+                border: solid 0px #666666;
+            }
+    
+            .hwui-Label {
+                font-size: $font-size-lg;
+            }
+    
+            select {
+                font-size: $font-size-md;
+                border-radius: 8px;
+                border: solid 1px #666666;
+            }
+        }
+    
+    
+    }
+}

@@ -1,0 +1,62 @@
+@import "../../../../node_modules/@fortawesome/fontawesome-pro/scss/_variables"
+@import "../../../style-variables/_colors"
+@import "../../../style-variables/_sizes"
+@import "../../../style-variables/_utils"
+
+.hwui-ProfilePicker
+  &__nav
+    align-items: center
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+    background: $secondary
+    padding: $padding-xsm
+
+    @media screen and (max-width: $tablet)
+      flex-direction: column
+      align-self: center
+      padding: $padding-space
+      text-align: center
+
+    .hwui-SectionTitle
+      margin: 0
+      width: auto
+
+    &--list
+      display: flex
+      flex-wrap: wrap
+      margin: 0
+
+      @media screen and (max-width: $tablet)
+        margin: 0
+        padding-left: 0
+
+      li
+        padding: $padding-xxsm
+
+        &:last-child a
+          font-size: $font-size-xsm
+
+        p
+          position: relative
+          display: block
+          width: 50px
+          height: 50px
+          cursor: pointer
+          background: $primary
+          color: $secondary
+          font-size: $font-size-sm
+          font-weight: $font-weight-medium
+          border-radius: 100%
+          outline: none
+
+          span
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+          &.is-active
+            background: $secondary
+            color: $primary
+            box-shadow: inset 0 0 0 $border-width $primary

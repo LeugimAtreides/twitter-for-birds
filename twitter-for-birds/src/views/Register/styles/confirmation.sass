@@ -1,0 +1,318 @@
+@import "../../../style-variables/_colors"
+@import "../../../style-variables/_sizes"
+@import "../../../style-variables/_utils"
+
+.hwui-RegisterConfirm
+  display: flex
+  flex-flow: column
+  justify-content: center
+  margin: 0 auto
+  max-width: 1070px
+
+  main
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    padding: 0 $padding-sm
+
+    @media screen and (max-width: $tablet)
+      flex-flow: column
+
+  div
+    &:not(#detail-grid)
+      display: flex
+      flex-flow: column
+
+      @media screen and (max-width: $tablet)
+        justify-content: center
+        align-self: center
+
+  &__Button
+    margin-top: $margin-md
+
+    &.hwui-Button__type-info
+      max-width: 300px
+
+      &.hwui-Button__size-lg
+        @media screen and (max-width: $tablet)
+          max-width: 50%
+          margin-left: auto
+          margin-right: auto
+          margin-bottom: $margin-sm
+        @media screen and (max-width: $phone)
+          max-width: 100%
+
+  &__LeftSide
+    width: 33.64485981%
+
+    @media screen and (max-width: $tablet)
+      width: 65%
+
+    @media screen and (max-width: $tablet-sm)
+      width: 55%
+
+    @media screen and (max-width: $phone)
+      width: 100%
+
+  &__Provider-Card
+    order: 1
+    margin-bottom: $margin-smed
+    border-radius: $border-radius
+    display: flex
+    height: 190px
+    width: 100%
+    border: $border-width solid $default-shade1
+
+    .hwui-ProviderProfile__Bio-Card
+      display: flex
+      background: transparent
+      flex-direction: column
+      border-radius: $border-radius
+      margin-top: 0
+      justify-content: center
+      align: center
+
+    .hwui-ProviderProfile__Provider-Photo
+      order: 1
+      border-radius: 50%
+      width: 100px
+      height: 100px
+      overflow: hidden
+      margin: $margin-sm $margin-xxsm $margin-xxsm $margin-xxsm
+      align-self: center
+
+      img
+        width: 100%
+
+    .hwui-ProviderProfile__initials
+
+      i
+        height: 100px
+        width: 100px
+        span
+          font-size: $font-size-xlg
+
+    .hwui-ProviderProfile__Provider-Stats
+      order: 2
+      margin: 0
+      text-align: center
+      @media screen and (max-width: $tablet-sm)
+        margin: auto
+
+      &--name
+        color: $success-shade-3
+        font-size: $font-size-md
+        margin: 0
+
+      @media screen and (max-width: $tablet-sm)
+        flex-direction: column
+        align: center
+        text-align: center
+
+      &--specialties
+        font-size: $font-size-xsm
+        color: $default
+        margin: 0
+
+        @media screen and (max-width: $tablet-sm)
+          flex-direction: column
+          align: center
+          text-align: center
+          margin-bottom: $margin-sm
+
+  &__Office-Card
+    order: 2
+    border-radius: $border-radius
+    display: flex
+    width: 100%
+    border: $border-width solid $default-shade1
+
+    @media screen and (max-width: $phone)
+      width: 100%
+
+    &--ImageLink
+
+    img
+      border-radius: $border-radius $border-radius 0 0
+      width: 100%
+      height: 120px
+      @media screen and (max-width: $phone-sm)
+        width: 100%
+
+    &--Office-Name
+      color: $success-shade-3
+      font-size: $font-size-md
+      margin: $margin-sm
+
+    &--Address
+      color: $default
+      font-size: $font-size-xsm
+      margin: 0 0 $margin-xxsm $margin-sm
+
+    &--Phone
+      color: $success-shade-3
+      font-size: $font-size-xsm
+      font-weight: $font-weight-medium
+      margin: 0 0 $margin-sm $margin-sm
+
+    &--Directions-Link
+      float: left
+      color: $primary
+      text-decoration: none
+      font-size: $font-size-xsm
+      font-weight: $font-weight-medium
+      margin: 0 0 $margin-sm $margin-sm
+      cursor: pointer
+      &:hover
+        text-decoration: underline
+
+  &__Appointment-Card
+    display: flex
+    border-bottom: $border-width $default-shade1
+    border-radius: $border-radius
+    height: auto
+    width: 46.72897196%
+    margin-left: $margin-md
+    border: $border-width solid $default-shade1
+
+    @media screen and (max-width: $tablet)
+      width: 65%
+      margin-left: 0
+      margin-top: $margin-xsm
+
+    @media screen and (max-width: $tablet-sm)
+      width: 55%
+
+    @media screen and (max-width: $phone)
+      width: 100%
+
+    h2
+      color: $success-shade-3
+      font-size: $font-size-xlg
+      margin: $margin-md $margin-xxsm $margin-sm $margin-md
+
+      @media screen and (max-width: $tablet)
+        margin-left: $margin-space
+
+      @media screen and (max-width: $phone)
+        margin: $margin-space $margin-space 0 $margin-space
+
+  &__Header
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    text-align: center
+    margin-top: $margin-sm
+    padding: $padding-xsm
+    width: 100%
+
+    .fa-check-circle-o
+      font-size: 36px
+      font-weight: $font-weight-light
+      color: $success
+      margin-right: $margin-sm
+
+    .fa-times-circle-o
+      font-size: 36px
+      font-weight: $font-weight-light
+      color: $danger
+      margin-right: $margin-sm
+
+    h1
+      color: $success-shade-3
+      font-size: $font-size-xlg
+
+  &__Buttons
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+    &--home
+
+      &.hwui-Button
+
+        &.hwui-Button__type-info
+          height: 38px
+          width: 267px
+          align-self: center
+          margin: $margin-sm
+          padding: 0
+
+  &__Edit-Link
+    float: left
+    color: $primary
+    text-decoration: none
+    font-size: $font-size-xsm
+    font-weight: $font-weight-medium
+    margin: $margin-md 0 $margin-sm $margin-sm
+    padding-top: $border-radius
+    cursor: pointer
+    &:hover
+      text-decoration: underline
+
+    @media screen and (max-width: $tablet)
+      margin: 0 0 $margin-xsm $margin-space
+
+  &__confirmation-group
+    display: flex
+    flex-direction: column
+    margin-bottom: $margin-sm
+
+  &__section-heading
+    display: flex
+    border-top: $border-width solid $default-shade1
+    flex: auto
+
+    @media screen and (max-width: $tablet)
+      flex-direction: column
+
+    &:first-of-type
+      border-top: none
+
+  &__detail-group
+    display: flex
+    flex-direction: row
+
+    @media screen and (max-width: $desktop)
+      flex-direction: column
+
+    @media screen and (max-width: $tablet)
+      flex-direction: row
+
+    @media screen and (max-width: $tablet)
+      flex-direction: column
+    p
+      margin: 0 0 $margin-space $margin-md
+
+      @media screen and (max-width: $tablet)
+        word-break: break-word
+
+    &--title
+      font-weight: $font-weight-semi-bold
+      width: 30%
+
+      @media screen and (max-width: $tablet)
+        width: 40%
+
+    &--date
+      font-weight: $font-weight-semi-bold
+      color: $success-shade-3
+
+    &--time
+      font-weight: $font-weight-semi-bold
+      color: $success
+
+    &--plain
+      font-weight: $font-size-md
+      color: $default
+      max-width: 300px
+
+      span
+        display: block
+
+  &__button-container
+    align-items: center
+    justify-content: space-around
+    margin-bottom: $margin-xxxlg
+    width: 100%

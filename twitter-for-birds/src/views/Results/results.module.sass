@@ -1,0 +1,73 @@
+@import "../../../node_modules/@fortawesome/fontawesome-pro/scss/_variables"
+@import "../../style-variables/_colors"
+@import "../../style-variables/_utils"
+@import "../../style-variables/_sizes"
+
+
+.deaui-Results
+    display: flex
+    flex-direction: row
+
+    &__results
+        width: 100%
+
+        &--page
+            display: flex
+            flex-direction: column
+            padding: $padding-sm $padding-md $padding-md $padding-md
+
+            @media screen and (max-width:$phone)
+                padding: 0
+
+        &--fixed
+            position: fixed
+            height: 0
+            z-index: -1
+            visibility: hidden
+
+        &--filters
+            align-items: center
+            display: flex
+            justify-content: space-between
+            margin-bottom: $margin-sm
+
+            @media screen and (max-width: $desktop)
+                display: block
+                margin-bottom: 0
+
+        &--paginated-results
+            &__cta
+                // background: $secondary url('/assets/images/searchDoctorSpotMINIspot.svg') no-repeat 98% 0
+                background-size: 225px
+                padding: $padding-md
+                text-align: center
+                color: $primary
+                border: $border-width solid $default-shade1
+                margin-bottom: $margin-sm
+
+            &--cta
+                color: $success
+
+        &--resultcount
+            align-self: flex-start
+            margin: $margin-sm
+
+            span
+                color: $primary-shade-2
+                font-weight: $font-weight-bold
+
+            @media screen and (max-width: $desktop)
+                margin-bottom: $margin-xxsm
+
+        &--sort
+            align-items: center
+            display: flex
+
+            @media screen and (max-width: $desktop)
+                justify-content: flex-end
+
+            & :global(.hwui-Select)
+                margin: 0
+
+            span
+                margin-right: $margin-sm

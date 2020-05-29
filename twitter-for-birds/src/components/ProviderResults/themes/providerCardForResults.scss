@@ -1,0 +1,217 @@
+@import "../../../style-variables/_colors.sass";
+@import "../../../style-variables/_sizes.sass";
+@import "../../../style-variables/_screens.sass";
+
+
+.deaui-ProviderProfile {
+
+    &__Bio-Card {
+        display: flex;
+        flex-direction: row;
+        flex: 2 1 auto;
+        justify-content: flex-start;
+        max-width: 50%;
+        width: 50%;
+        margin: 0;
+        background-color: $secondary;
+      
+        @media screen and (max-width: $desktop) {
+            width: auto;
+            max-width: 100%;
+            align-items: center;
+            margin-bottom: $margin-md;
+
+        }
+      
+        @media screen and (max-width: $tablet-sm){
+            margin-bottom: 0
+        }
+
+    }
+    
+    
+    &__LeftSide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 1 auto;
+      
+        @media screen and (max-width: $phone){
+            justify-content: center;
+            align-self: flex-start;
+        }
+    }
+    
+    &--ViewProfile {
+        align-self: center;
+        margin: $margin-md 0 0 0;
+      
+        @media screen and (max-width: $phone){
+            margin: $margin-sm 0 0 0;
+        }
+    }
+    
+    &__Provider-Photo {
+        height: 150px;
+        width: 150px;
+        margin: 0;
+        border-radius: 50%;
+        overflow: hidden;
+      
+        &:hover {
+            cursor: pointer;
+        }
+      
+        @media screen and (max-width: $phone){
+            width: 50px;
+            height: 50px;
+
+        }
+      
+        img {
+            height: auto;
+            width: 100%;
+        }
+      
+        .deaui-ProviderProfile__initials {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            i {
+                position: relative;
+                height: 150px;
+                margin-right: 0;
+                width: 150px;
+                display: block;
+                cursor: pointer;
+                background: $primary-shade-2;
+                color: #ffffff;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 100%;
+                outline: none;
+    
+                span {
+                    font-size: 4.75rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-style: normal;
+                }
+            }
+        }
+
+    }
+    
+    &__Provider-Stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0 $margin-sm 0 $margin-lg;
+        text-align: left;
+        flex: 2 2 auto;
+      
+        &--name {
+            font-size: $font-size-md;
+            font-weight: $font-weight-medium;
+            margin: 0;
+            text-align: left;
+            color: $primary-shade-2;
+        
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+        }
+      
+        &--specialties {
+            text-align: left;
+            font-size: $font-size-sm;
+            margin: $margin-xxsm 0 0 0;
+        
+            @media screen and (max-width: $phone) {
+                font-size: $font-size-xsm;
+                line-height: 1;
+            }
+        }
+      
+        &--appointments {
+            text-align: left;
+        
+            &--true {
+                color: $turtle-green;
+                font-size: $font-size-xsm;
+                @media screen and (max-width: $tablet) {
+                    margin: $margin-xxsm 0;
+                }
+
+            }
+        
+            &--false {
+                font-size: $font-size-xsm;
+                @media screen and (max-width: $tablet){
+                    margin: $margin-xxsm 0;
+                }
+            }
+        
+            &--availability {
+                font-size: $font-size-xsm;
+                margin: $margin-xsm 0;
+            }
+        }
+      
+        &--phso {
+            font-size: $font-size-xsm;
+        }
+      
+        &--employed {
+            font-size: $font-size-xsm;
+        }
+
+    }
+    
+    &__Rating {
+        margin: $margin-space 0;
+        display: flex;
+        flex-direction: row;
+      
+        @media screen and (max-width: $tablet){
+            justify-content: flex-start;
+            margin: 0;
+
+        }
+      
+        &--stars {
+            display: flex;
+
+            .svg-inline--fa {
+                font-size: 20px;
+            }
+
+        }
+      
+        &--number {
+            font-size: $font-size-sm;
+            margin: 2px $margin-xxsm 0 0 ;
+            font-weight: $font-weight-medium;
+            color: $success;
+
+        }
+
+        &--responses {
+            font-size: $font-size-xsm;
+            margin: 2px 0 0 0;
+            color: $success;
+        }
+
+    }
+    
+    &--ViewProfile {
+        @media screen and (max-width: $desktop){
+            display: none;
+        }
+    }
+}

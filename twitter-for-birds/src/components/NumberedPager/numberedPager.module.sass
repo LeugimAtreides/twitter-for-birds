@@ -1,0 +1,27 @@
+@import "../../style-variables/_colors"
+@import "../../style-variables/_sizes"
+@import "../../style-variables/_utils"
+
+.deaui-NumberedPager
+    text-align: center
+    width: 100%
+    height: 100px
+    text-align: center
+
+    span span
+        font-size: $font-size-lg
+        color: $default
+        vertical-align: bottom
+
+
+    & :global(.hwui-Button__type-default)
+        display: inline-block
+        padding: 0px
+        width: 38px
+        height: 38px
+        margin: $margin-xxsm
+
+    & :global(.hwui-Button__type-active)
+        padding: 0px
+        width: 38px
+        height: 38px

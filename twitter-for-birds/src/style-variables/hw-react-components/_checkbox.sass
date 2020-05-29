@@ -1,0 +1,80 @@
+@import "../_fonts"
+@import "../_sizes"
+@import "../_colors"
+
+.hwui-Checkbox
+  position: relative
+  display: flex
+  align-items: center
+  margin-bottom: $margin-xsm
+
+  input[type="checkbox"]
+    position: absolute
+    top: 50%
+    left: calc(#{$checkbox-size} / 5)
+    transform: translate(-50%, -50%)
+    margin: 0
+    // width: calc(#{$checkbox-size} + (#{$checkbox-border-width} * 2))
+    height: calc(#{$checkbox-size} + (#{$checkbox-border-width} * 2))
+    outline: none
+
+    & + label
+      margin: 0 0 0 $margin-md
+      display: inline-block
+      cursor: pointer
+
+    &:before
+      display: inline-block
+      content: ''
+      width: $checkbox-size
+      height: $checkbox-size
+      margin: -1px
+      cursor: pointer
+      background-color: $checkbox-bg
+      border: $checkbox-border-width solid $checkbox-border-color
+      border-color: $default-shade-1
+
+    &:after
+      transition: background-color .2s linear
+      display: none
+      content: '\f00c'
+      font-family: $icon-font-primary
+      font-size: 22px
+      font-weight: $font-weight-bold
+      color: $checkbox-active-color
+      width: $checkbox-size
+      height: $checkbox-size
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-17%, -56%)
+      cursor: pointer
+
+    &:checked:after
+      display: block
+
+  input[type="checkbox"][disabled]
+
+    & + label
+      color: $default
+
+    &:before
+      border-color: $default-shade1
+
+    &:after
+      color: $default-shade1
+
+  &__has-errors
+
+    input[type="checkbox"]
+
+      & + label
+        color: $danger
+
+      &:before
+        border-color: $danger
+
+    span
+      display: block
+      margin-bottom: $margin-space
+      color: $danger

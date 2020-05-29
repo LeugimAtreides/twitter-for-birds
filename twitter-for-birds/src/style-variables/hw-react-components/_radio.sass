@@ -1,0 +1,90 @@
+@import "../_fonts"
+@import "../_sizes"
+@import "../_colors"
+
+.hwui-Radio
+  position: relative
+  display: flex
+  align-items: center
+  margin-bottom: $margin-xsm
+
+  input[type="radio"]
+    position: absolute
+    top: 50%
+    left: calc(#{$radio-size} / 2)
+    transform: translate(-50%, -50%)
+    margin: 0
+    width: $radio-size
+    height: $radio-size
+    outline: none
+
+    & + label
+      margin: 0 0 0 $margin-md
+      display: inline-block
+      cursor: pointer
+
+    &:before
+      display: block
+      content: ''
+      width: $radio-size
+      height: $radio-size
+      margin: -1px
+      cursor: pointer
+      border-radius: $border-radius-round
+      background-color: $radio-bg
+      border: $radio-border-width solid $radio-border-color
+
+    &:after
+      transition: background-color .2s linear
+      display: none
+      content: ''
+      width: calc(#{$radio-size} - 4px)
+      height: calc(#{$radio-size} - 4px)
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      cursor: pointer
+      border-radius: $border-radius-round
+      background-color: $water-blue
+
+    &:checked:after
+      display: block
+
+  &__has-errors
+
+    input[type="radio"]
+
+      &.hwui-RadioBadge + .hwui-Label
+        border-color: $danger
+
+      & + label
+        color: $danger
+
+      &:before
+        border-color: $danger
+
+    span
+      display: block
+      margin-bottom: $margin-space
+      color: $danger
+
+.hwui-RadioBadge
+  visibility: hidden
+  opacity: 0
+  height: 0
+  width: 0
+  padding: 0
+
+  & + .hwui-Label
+    color: $primary
+    border: $border-width solid $default-shade1
+    background: $secondary-shade2
+    padding: $padding-space $padding-xsm
+    border-radius: $border-radius
+    margin: 0
+
+  &:checked + .hwui-Label
+    background: $primary
+    color: $text-shade1
+    border-color: $primary-shade-1

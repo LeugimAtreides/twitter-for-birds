@@ -1,0 +1,63 @@
+@import "../../../style-variables/_colors.sass";
+@import "../../../style-variables/_sizes.sass";
+@import "../../../style-variables/_utils";
+
+
+.location_picker {
+    @media screen and (max-width: $tablet-sm){
+        text-align: left;
+    }
+
+    .location-title {
+        font-size: $font-size-sm;
+        color: $default;
+    }
+
+    .hwui-Select {
+        select {
+            color: $default;
+        }
+    }
+}
+.location-miles-away {
+    font-size: $font-size-sm;
+    color: $default;
+    margin-bottom: $margin-xsm;
+    margin-top: 0;
+
+    @media screen and (max-width: $tablet){
+        margin: 0;
+    }
+}
+.location-office {
+    color: $default;
+    margin-bottom: 16px;
+}
+.location-office-address {
+    display: flex;
+}
+
+.location-facility-name {
+    margin-top: $margin-xxsm;
+    font-weight: $font-weight-semi-bold;
+    line-height: 1;
+}
+.address-info > p {
+    text-transform: capitalize;
+    margin: 0;  
+}
+.location-office-phone {
+    display: flex;
+    color: $default;
+}
+.office-icon {
+    color: $primary;
+    font-size: 18px;
+    margin: $margin-xxsm $margin-sm 0 0;
+}
+
+.phone-icon {
+    color: $primary;
+    font-size: 18px;
+    margin: $margin-sm $margin-xsm 0 0;
+}

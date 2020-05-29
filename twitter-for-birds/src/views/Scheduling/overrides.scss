@@ -1,0 +1,150 @@
+
+// Scheduling Overrides
+.hwui-SectionTitle {
+  font-size: 1.25rem;
+  color: #0e5d56;
+  font-weight: 500;
+  margin: 20px 0;
+}
+.hwui-Map {
+  width: 97%;
+}
+.hwui-ProviderProfile__Navigation-Bar ul {
+  list-style-type: none;
+}
+.hwui-ProviderProfile__Expertise--section .column1 {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.hwui-ProviderProfile__Expertise--section h2 {
+  color: #0e5d56;
+  margin-left: 48px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.hwui-ProviderProfile__Expertise--section .column2 {
+  width: 65%;
+}
+.hwui-ProviderProfile__Expertise--section .column2 p {
+  -webkit-font-smoothing: antialiased;
+  margin-block-start: 1em;
+  line-height: 1.50rem;
+}
+
+// Insurances Overrides
+.hwui-accordion__title {
+  display: block;
+  text-align: center;
+  color: #157ea8;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.hwui-accordion__icon {
+  display: block;
+}
+.hwui-ProviderProfile__Insurances--list ul {
+  list-style-type: none;
+  column-count: 2;
+  column-fill: balance;
+  margin-bottom: 0;
+}
+.hwui-accordion__show .hwui-accordion__content ul {
+  column-count: 2;
+  column-fill: balance;
+  margin-top: 0;
+  width: 100%;
+}
+.hwui-accordion__show > .hwui-accordion__content {
+  display: flex;
+  max-height: 1000px;
+  opacity: 1;
+  overflow: hidden;
+  transition: all .4s ease-in;
+  z-index: 1;
+}
+.hwui-accordion__show > .hwui-accordion__content ul {
+  list-style-type: none;
+  column-count: 2;
+  column-fill: balance;
+  margin-bottom: 0;
+}
+.hwui-accordion__hidden > .hwui-accordion__content {
+  display: flex;
+  max-height: 0px;
+  opacity: 1;
+  overflow: hidden;
+  transition: all .4s ease-in;
+  z-index: 1;
+}
+.hwui-accordion__hidden > .hwui-accordion__content ul {
+  column-count: 2;
+  column-fill: balance;
+  margin-top: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+// MapPreview Overrides
+.hwui-MapPreview {
+  margin: 0 0 0 16px;
+  border-radius: 4px;
+  width: 330px;
+  height: 180px;
+}
+.hwui-MapPreview__cta {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  vertical-align: top;
+}
+.hwui-MapPreview__cta a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  width: inherit;
+  height: inherit;
+  z-index: 1;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.hwui-MapPreview__cta img {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  border-radius: 4px;
+  width: inherit;
+  height: inherit;
+}
+.hwui-MapPreview__cta h3 {
+  margin: 0;
+  transition: all .15s ease-in-out;
+  font-size: .938rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #157ea8;
+  z-index: 1;
+  background: #fff;
+  padding: 12px;
+  border: none;
+  align-self: flex-end;
+  width: 100%;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+}
+.hwui-MapPreview__cta .fa {
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  right: 15px;
+  color: #157ea8;
+  font-size: 20px;
+}

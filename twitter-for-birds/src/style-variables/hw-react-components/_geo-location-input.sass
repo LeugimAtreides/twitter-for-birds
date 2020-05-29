@@ -1,0 +1,48 @@
+@import "../_colors"
+@import "../_sizes"
+@import "../_screens"
+
+.hwui-GeoLocation
+  position: relative
+  width: 100%
+
+  &__loading .fa
+      animation: rotation .75s ease infinite
+
+  &__error .fa
+      animation: shake .75s ease both
+
+  &__success .fa
+      color: $success
+
+  .fa-location-arrow
+    position: absolute
+    right: 88px
+    top: 35%
+    transform-origin: 50% 50%
+    visibility: hidden
+
+  .hwui-FormInput input
+    padding: 0 $padding-md 0 $padding-sm
+
+
+
+@keyframes rotation
+  0%
+    transform: rotate(0deg)
+  15%
+    transform: rotate(-30deg)
+  30%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+@keyframes shake
+  10%, 90%
+    transform: translate3d(-1px, 0, 0)
+  20%, 80%
+    transform: translate3d(2px, 0, 0)
+  30%, 50%, 70%
+    transform: translate3d(-4px, 0, 0)
+  40%, 60%
+    transform: translate3d(4px, 0, 0)

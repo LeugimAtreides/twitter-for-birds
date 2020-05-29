@@ -1,0 +1,17 @@
+@import "../../style-variables/_fonts"
+@import "../../style-variables/_colors"
+@import "../../style-variables/_utils"
+
+.base
+    @extend %desktop-width
+    padding-bottom: 50px
+    padding-top: 50px
+    font: normal 16px/1.5 $font-primary
+
+    a
+        color: $primary-shade1
+        cursor: pointer
+        text-decoration: none
+
+        &:hover
+            text-decoration: underline

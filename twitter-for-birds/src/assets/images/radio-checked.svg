@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #00b3e3;
+      }
+
+      .cls-1 {
+        fill-opacity: 0;
+        stroke: #00b3e3;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <rect id="radio" class="cls-1" x="3" y="3" width="20.16" height="20" rx="9.993" ry="9.993"/>
+  <circle id="radio_checked" data-name="radio checked" class="cls-2" cx="13" cy="13" r="7"/>
+</svg>

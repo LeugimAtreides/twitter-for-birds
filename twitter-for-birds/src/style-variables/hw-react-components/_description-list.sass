@@ -1,0 +1,27 @@
+@import "../_colors"
+@import "../_sizes"
+@import "../_screens"
+
+.hwui-DescriptionList
+  display: flex
+  flex-wrap: wrap
+
+  @media screen and (max-width: $phone)
+    display: block
+
+  dt,
+  dd
+    width: 50%
+    max-width: 50%
+    min-width: 50%
+    margin: $margin-space 0
+
+    @media screen and (max-width: $phone)
+      max-width: 100%
+      width: 100%
+
+  dt
+    color: $text
+
+  dd
+    color: $text-shade-1

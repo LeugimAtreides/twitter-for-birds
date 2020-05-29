@@ -1,0 +1,28 @@
+@import "../_fonts"
+@import "../_sizes"
+@import "../_colors"
+.hwui-Select
+  position: relative
+
+  &:after
+    align-items: center
+    content: "\F0D7"
+    color: $default-shade-1
+    display: inline-flex
+    font-family: 'Font Awesome 5 Pro'
+    font-size: 22px
+    font-weight: 900
+    height: 100%
+    position: absolute
+    right: 10px
+
+  &__container
+    width: 100%
+
+  &__label
+    display: flex
+
+  select
+    padding-right: $padding-md
+    position: relative
+    z-index: 1

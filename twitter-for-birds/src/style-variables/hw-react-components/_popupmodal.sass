@@ -1,0 +1,83 @@
+
+@import "../_sizes"
+@import "../_screens"
+@import "../_colors"
+
+.hwui-WarningModal
+
+  .hwui-Modal__modal
+    overflow: auto
+
+  p,
+  .legal
+    margin: $margin-sm 0
+    text-align: center
+
+    @media screen and (max-width: $phone)
+      font-size: $font-size-xsm
+
+  p
+    font-size: $font-size-xsm
+    line-height: $line-height-xlg
+
+  .legal
+    font-size: $font-size-xsm
+    color: $popupmodal-legal
+
+  &__title
+    color: $success-shade-3
+    margin: 0
+    font-size: $font-size-md
+    font-weight: $font-weight-semi-bold
+
+    @media screen and (max-width: $phone)
+      font-size: $font-size-sm
+
+  &__close-btn
+    cursor: pointer
+    position: absolute
+    top: 7px
+    right: 14px
+    font-size: $font-size-md
+    text-decoration: none
+    color: $popupmodal-close-btn
+    outline: 0
+    border: 0
+    background: transparent
+
+  .hwui-ActionTitle
+    margin: $margin-md 0
+
+    @media screen and (max-width: $phone)
+      margin: $margin-sm 0
+
+  .hwui-Modal__modal
+    border-radius: 0
+    text-align: center
+    padding: $padding-md $padding-lg
+
+    @media screen and (max-width: $phone)
+      padding: $padding-md $padding-sm
+
+  .fa.fa-exclamation-circle,
+  .fa.fa-exclamation,
+  .fa.fa-envelope,
+  .fa.fa-question-circle
+    display: block
+    color: $popupmodal-danger
+    font-size: $font-size-xlg
+    margin-bottom: $margin-sm
+
+    @media screen and (max-width: $phone)
+      font-size: $font-size-md
+
+  .fa.fa-envelope,
+  .fa.fa-exclamation
+    color: $popupmodal-primary
+
+  .fa.fa-question-circle
+    color: $popupmodal-success
+
+  .hwui-Anchor
+    display: block
+    margin-top: $margin-sm

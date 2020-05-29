@@ -1,0 +1,144 @@
+@import "../../../../node_modules/@fortawesome/fontawesome-pro/scss/_variables";
+@import "../../../style-variables/_colors";
+@import "../../../style-variables/_utils";
+@import "../../../style-variables/_sizes";
+
+.deaui-Results {
+    display: flex;
+    flex-direction: column;
+
+    &__filters {
+        &--close {
+            display: none;
+            position: absolute;
+            right: 15px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 32px;
+            color: $default-shade-1;
+
+            @media screen and (max-width:$desktop){
+                display: block;
+                align-self: flex-end;
+            }
+        }
+        &--title {
+            margin-bottom: $margin-sm;
+            font-weight: $font-weight-bold;
+            display: none;
+
+            @media screen and (max-width: $desktop){
+                align-self: center;
+            }
+
+            span {
+                text-align: center;
+                color: $primary-shade-2;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__collapse {
+        &--content {
+            transition: all .5s ease-in-out;
+            background: $secondary;
+
+            .hwui-Anchor {
+                display: block;
+                margin: $margin-sm 0 $margin-xsm;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        &--title {
+            .hwui-Anchor {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__results {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        &--page {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            padding: $padding-sm $padding-md $padding-md $padding-md;
+
+            @media screen and (max-width:$phone){
+                padding: 0;
+            }
+        }
+
+        &--fixed {
+            position: fixed;
+            height: 0;
+            z-index: -1;
+            visibility: hidden;
+        }
+
+        &--filters {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $margin-sm;
+
+            @media screen and (max-width: $desktop) {
+                display: block;
+                margin-bottom: 0;            
+            }
+        }
+
+        &--paginated-results {
+            &__cta {
+                // background: $secondary url('/assets/images/searchDoctorSpotMINIspot.svg') no-repeat 98% 0
+                background-size: 225px;
+                padding: $padding-md;
+                text-align: center;
+                color: $primary;
+                border: $border-width solid $default-shade1;
+                margin-bottom: $margin-sm;
+            }
+
+            &--cta {
+                color: $success;
+            }
+        }
+
+        &--resultcount {
+            align-self: flex-start;
+            margin: $margin-sm;
+
+            span {
+                color: $primary-shade-2;
+                font-weight: $font-weight-bold;
+            }
+
+            @media screen and (max-width: $desktop) {
+                margin-bottom: $margin-xxsm;
+            }
+        }
+
+        &--sort {
+            align-items: center;
+            display: flex;
+
+            @media screen and (max-width: $desktop) {
+                justify-content: flex-end;
+            }
+
+            .hwui-Select {
+                margin: 0;
+            }
+
+            span {
+                margin-right: $margin-sm;
+            }
+        }
+    }
+}

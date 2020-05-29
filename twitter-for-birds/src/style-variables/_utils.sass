@@ -1,0 +1,12 @@
+@import "./_sizes"
+@import "./_screens"
+
+%desktop-width
+  margin: 0 auto
+  max-width: #{850px + ($padding-sm * 2)}
+  padding: 0 $padding-sm
+
+@keyframes spinner
+  to
+    -webkit-transform: rotate(360deg)
+            transform: rotate(360deg)

@@ -1,0 +1,1234 @@
+
+@import "../../../node_modules/@fortawesome/fontawesome-pro/scss/_variables"
+@import "../../style-variables/_colors"
+@import "../../style-variables/_sizes"
+@import "../../style-variables/_utils"
+@import "../../style-variables/_fonts"
+
+.hwui-ProviderProfile
+
+  *
+    box-sizing: border-box
+
+  &__No-Request
+    display: block
+
+    button
+      margin-bottom: $padding-xxsm
+      &:first-of-type
+        display: block
+        margin-right: $padding-xxsm
+        @media screen and (max-width: $tablet-sm)
+          display: inline-block
+          margin-right: 0
+
+  &__No-Online-Availability
+    display: flex
+
+    @media screen and (max-width: $tablet-sm)
+      display: block
+
+    button
+      margin-bottom: $padding-xxsm
+      &:first-of-type
+        display: block
+        margin-right: $padding-xxsm
+        @media screen and (max-width: $tablet-sm)
+          display: inline-block
+          margin-right: 0
+
+  .hwui-Tooltip
+    &__tip
+      overflow: scroll
+    .fa-question-circle
+      font-size: $font-size-md
+
+  .hwui-MapPreview
+    margin: 0 0 0 $margin-sm
+    border-radius: $border-radius
+    width: 330px
+    height: 180px
+
+    &__loader
+      position: relative
+      background: $default-shade1
+      margin: $margin-xsm auto 0 auto
+      width: 230px
+      height: 220px
+
+      .hwui-Loading
+        position: absolute
+
+        &__loader
+          width: 25px
+          height: 25px
+
+    &__cta
+      height: 100%
+      width: 100%
+      padding: 0
+      vertical-align: top
+
+      img
+        left: 0
+        position: absolute
+        top: 0
+        z-index: 0
+        border-radius: $border-radius
+        width: inherit
+        height: inherit
+
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 0
+        position: relative
+        width: inherit
+        height: inherit
+        z-index: 1
+        cursor: pointer
+
+        &:hover h3
+          box-shadow: inset 0 0 999px 999px $primary
+          color: $secondary
+
+      h3
+        margin: 0
+        transition: all .15s ease-in-out
+        font-size: $font-size-xsm
+        font-weight: $font-weight-semi-bold
+        text-transform: uppercase
+        text-align: center
+        color: $primary
+        z-index: 1
+        background: $secondary
+        padding: $padding-xsm
+        border: none
+        align-self: flex-end
+        width: 100%
+        border-radius: $border-radius
+
+      .fa
+        position: absolute
+        z-index: 2
+        top: 5px
+        right: 15px
+        color: $primary
+        font-size: 20px
+
+    @media screen and (max-width: $tablet-sm)
+      margin-left: auto
+      margin-right: auto
+      margin: $margin-xsm
+      order: 2
+      border: none
+      align-self: center
+
+  .hwui-StickyScroll
+    height: 100%
+    &--sticky
+      position: fixed
+      top: 0
+      z-index: 2
+      width: 100%
+      height: inherit
+
+  &__Main
+    max-width: $desktop
+    margin: $margin-md auto 0 auto
+    background: $secondary
+
+    @media screen and (max-width: $tablet)
+      margin-top: 0
+
+    @media screen and (max-width: $phone)
+      padding: $padding-space
+
+  &__Bio-Card
+    background: $default-shade2
+    display: flex
+    justify-content: center
+    @media screen and (max-width: $tablet-sm)
+      flex-direction: column
+      align: center
+
+  &__Navigation-Bar
+    background: $default-shade2
+    display: flex
+    border-top: $border-width solid $default-shade1
+    border-bottom: $border-width solid $default-shade1
+    justify-content: center
+    height: 100%
+    z-index: 2
+
+    &--rating-number
+      color: $success
+      margin-left: $margin-space
+
+    &--wrapper
+      height: 60px
+      @media screen and (max-width: $tablet-sm)
+        width: 100%
+        overflow-x: scroll
+
+    ul
+      display: flex
+      margin-top: $margin-smed
+      margin-bottom: $margin-smed
+      padding-left: 0
+      @media screen and (max-width: $phone)
+        margin: 0
+        align-items: center
+
+      li
+        list-style-position: inside
+        padding: 0 $padding-sm 0 $padding-sm
+        @media screen and (max-width: $phone)
+          flex-shrink: 0
+
+        &.selected
+          color: $primary
+
+        a
+          font-size: $font-size-xsm
+          font-weight: $font-weight-semi-bold
+          color: $primary
+          text-decoration: none
+          width: auto
+          display: flex
+          border-top: none
+          border-bottom: none
+          justify-content: none
+          text-transform: uppercase
+          z-index: 2
+          &:active, &:focus, &:target, &:hover
+            color: darken($primary, 7%)
+
+    @media screen and (max-width: $tablet-sm)
+      width: 100%
+      justify-content: flex-start
+      overflow-x: scroll
+      height: 100%
+
+  &__Anchor
+    display: block
+    height: 0
+    position: relative
+    top: -60px
+    visibility: hidden
+
+  &__Section-Title
+    margin: 0 $margin-sm
+    padding: $padding-md 0
+
+    @media screen and (max-width: $tablet-sm)
+      text-align: center
+      margin: $margin-sm 0 $margin-xsm 0
+      padding: 0
+      justify-content: center
+      flex-direction: column
+
+    @media screen and (max-width: $phone)
+      margin: $margin-xxsm 0 $margin-xsm 0
+
+  &__Provider-Photo
+    border-radius: $border-radius-round
+    width: 225px
+    height: 225px
+    overflow: hidden
+    margin: $margin-md 0 $margin-sm 0
+
+    @media screen and (max-width: $tablet-sm)
+      width: 125px
+      height: 125px
+      margin: $margin-xsm auto
+
+    img
+      width: 100%
+
+  &__initials
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    i
+      position: relative
+      display: block
+      width: 225px
+      height: 225px
+      cursor: pointer
+      background: $primary
+      color: $secondary
+      font-size: $font-size-sm
+      font-weight: $font-weight-medium
+      border-radius: $border-radius-circle
+      outline: none
+
+      @media screen and (max-width: $tablet-sm)
+        height: 125px
+        width: 125px
+
+      span
+        font-size: $font-size-xlg*3
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-style: normal
+
+        @media screen and (max-width: $tablet-sm)
+          font-size: $font-size-xlg*2
+
+  &__Provider-Stats
+    margin: $margin-lg $margin-sm $margin-sm $margin-xxlg
+    text-align: left
+
+    @media screen and (max-width: $tablet-sm)
+      margin: auto
+
+    &--name
+      color: $success-shade-3
+      font-size: $font-size-lg
+      margin-bottom: $margin-sm
+
+    @media screen and (max-width: $tablet-sm)
+      flex-direction: column
+      align: center
+      text-align: center
+
+    &--specialties
+      font-size: $font-size-sm
+      max-width: 350px
+
+      @media screen and (max-width: $tablet-sm)
+        flex-direction: column
+        align: center
+        text-align: center
+        margin-bottom: $margin-sm
+
+    &--appointments
+      display: flex
+
+      &--true
+        color: $success
+
+        i
+          font-size: $font-size-md
+
+      &--false
+        color: $default-shade-1
+
+        i
+          font-size: 19px
+          margin-left: $margin-xxsm
+          margin-right: $margin-xsm
+
+      &--availability
+        color: $primary
+        margin: $margin-sm 0 0 0
+
+        b
+          font-weight: bold
+
+    &--videoVisits
+      color: #94378d
+
+      i
+        font-size: $font-size-md
+
+    &--phso
+      color: $success
+      margin-top: 0
+
+    &--employed
+      color: $success-shade-3
+      margin-top: 0
+
+    &--insurance-flag
+      color: $warning
+      margin: $margin-sm 0 0 0
+
+      p
+        font-size: $font-size-sm
+      i
+        font-size: 19px
+      b
+        font-weight: bold
+
+    @media screen and (max-width: $tablet-sm)
+      flex-direction: column
+      align: center
+      text-align: center
+      margin-bottom: $margin-sm
+
+  &__Ratings-Title
+    h2
+      padding-bottom: 0
+
+  &__Rating
+    margin: $margin-xsm 0
+    display: flex
+    &:focus
+      outline: none
+
+    &--review
+      display: flex
+      border-bottom: $border-width solid $default-shade1
+      padding: $padding-md
+
+      @media screen and (max-width: $phone)
+        flex-direction: column
+
+      &:last-of-type
+        border-bottom: 0
+
+      .date
+        color: $success-shade-3
+        flex: 0 0 auto
+        font-size: $font-size-md
+        margin-right: $margin-md
+
+        @media screen and (max-width: $phone)
+          margin-bottom: $margin-space
+
+      .rating
+        flex: 1 1 auto
+
+      .stars
+        display: flex
+        align-content: flex-start
+
+        .hwui-ProviderProfile__Rating
+          &--number
+            margin: 0
+
+    &--review-container
+      border: $border-width solid $default-shade1
+      border-radius: $border-radius
+
+      .hwui-ProviderProfile__Rating
+
+        &--stars
+          img
+            height: 20px
+            width: 20px
+
+    &--reviews
+      display: flex
+      flex-direction: column
+      margin: 0 $margin-sm
+
+    &--heading
+      display: flex
+      margin: $margin-xsm 0
+
+      @media screen and (max-width: $phone)
+        flex-direction: column
+
+      .hwui-ProviderProfile__Rating
+
+        &--number
+          padding-left: 0
+          margin-right: $margin-space
+
+          @media screen and (max-width: $phone)
+            margin: 0
+            order: 2
+
+        &--stars
+          @media screen and (max-width: $phone)
+            order: 1
+
+        &--responses
+          font-size: $font-size-md
+          @media screen and (max-width: $phone)
+            margin-bottom: $margin-space
+            order: 3
+
+    &--number
+      color: $success
+      font-size: $margin-smed
+      float: left
+      padding-left: $padding-space
+      align-self: center
+      font-weight: bold
+      margin: 0
+    &--responses
+      color: $default-shade-1
+      align-self: center
+      font-size: $font-size-sm
+      margin: 0
+      padding-left: $padding-xxsm
+
+    &--stars
+      align-self: center
+
+      .svg-inline--fa
+        font-size: 24px
+
+      img
+        height: 24px
+        width: 24px
+
+    @media screen and (max-width: $tablet-sm)
+      align: center
+      justify-content: center
+      margin-bottom: 0
+
+  &__Location
+    margin: 0 $margin-sm
+    height: 100%
+    display: flex
+    @media screen and (max-width: $tablet-sm)
+      align: center
+      justify-content: center
+      flex-direction: column
+
+    &__Office-List
+      flex-direction: column
+      display: flex
+      flex-wrap: nowrap
+      flex-grow: 2
+      height: 100%
+      float: left
+      border-radius: $border-radius
+      border: $border-width solid $default-shade1
+      @media screen and (max-width: $tablet-sm)
+        align: center
+        justify-content: center
+        order: 1
+
+      .hwui-accordion
+        position: relative
+
+        &__content
+          @media screen and (max-width: $phone)
+            justify-content: center
+
+          &.hwui-accordion__show
+            .hwui-accordion__icon:after
+              content: $fa-var-chevron-up
+
+        .hwui-accordion__icon
+          position: absolute
+          right: 15px
+          top: 25px
+
+          @media screen and (max-width: $phone)
+            align-self: center
+
+        &.hwui-accordion__hidden
+          .hwui-accordion__content
+            max-height: 0px
+            opacity: 0
+            transition: all .4s ease-out
+            z-index: 1
+
+            .hwui-accordion__icon::after
+              content: $fa-var-chevron-down
+
+          .hwui-accordion__icon::after
+            content: $fa-var-chevron-up
+
+        &.hwui-accordion__show
+          .hwui-accordion__icon::after
+            content: $fa-var-chevron-down
+
+        .hwui-accordion__title,
+        .hwui-accordion__icon
+          outline: none
+          color: $secondary-shade-3
+          font-size: 20px
+          cursor: pointer
+
+        .hwui-accordion__title
+          margin-bottom: $margin-xxsm
+          max-width: 90%
+
+          @media screen and (max-width: $phone)
+            justify-content: center
+
+        .hwui-accordion__content
+          overflow: hidden
+          margin-bottom: $margin-xsm
+          transition: all .4s ease-in
+          max-height: 150px
+
+          @media screen and (max-width: $tablet)
+            max-height: 220px
+
+        &:not(:last-of-type)
+          margin-bottom: 0
+          border-bottom: $border-width solid $default-shade1
+
+      &--office
+        display: flex
+        flex-direction: column
+        margin: 0 0 $margin-md $margin-xxsm
+        flex-wrap: nowrap
+        transition: 0.4s
+
+        &--header
+          display: flex
+          // justify-content: space-between
+          flex-direction: row
+          order: 1
+          padding-top: $padding-xsm
+          cursor: pointer
+
+          @media screen and (max-width: $phone)
+            flex-direction: column
+
+          &--marker
+            height: 26px
+            width: 26px
+            background-color: $success
+            border-radius: 50%
+            margin: 0 0 0 $margin-sm
+            align-self: center
+
+            p
+              color: $secondary
+              margin: 0
+              font-size: $font-size-xsm
+              font-weight: $font-weight-semi-bold
+              text-align: center
+              vertical-align: middle
+              line-height: 26px
+
+          &--city
+            order: 1
+            margin: 0 0 0 $margin-smed
+            align-self: center
+
+            font-size: $font-size-smed
+            color: $secondary-shade-3
+            font-weight: 500
+
+          &--distance
+            order: 1
+            margin: 0 0 0 $margin-sm
+            align-self: center
+            font-size: $font-size-smed
+            color: $default-shade1
+            font-weight: 400
+
+        &--expanded
+          display: flex
+          flex-direction: column
+          order: 2
+          float: left
+
+          &--name
+            font-weight: $font-weight-semi-bold
+            margin: $margin-xxsm $margin-xsm 0 $margin-xxlg
+
+            @media screen and (max-width: $phone)
+              margin: $margin-space
+              text-align: center
+
+          &--address
+            order: 1
+            float: left
+            margin: $margin-xxsm 0 0 $margin-xxlg
+            color: $default-shade-1
+            font-size: $font-size-smed
+            line-height: 25px
+            text-transform: capitalize
+
+            @media screen and (max-width: $phone)
+              margin: $margin-xxsm 0 0 0
+              text-align: center
+
+          &--phone
+            order: 2
+            margin: $margin-xxsm 0 0 $margin-xxlg
+
+            a
+              float: left
+              color: $secondary-shade-3
+              font-size: $font-size-smed
+              text-decoration-line: none
+
+              @media screen and (max-width: $phone)
+                float: none
+                margin: 0 auto
+
+            @media screen and (max-width: $phone)
+              display: flex
+              margin: $margin-xxsm 0 0 0
+    &__Map
+      margin: 0 0 0 $margin-sm
+      border: $border-width solid $default-shade1
+      border-radius: $border-radius
+      height: 100%
+
+      img
+        border-radius: $border-radius
+
+      a
+        cursor: pointer
+        height: inherit
+        width: inherit
+
+      @media screen and (max-width: $tablet-sm)
+        margin-left: auto
+        margin-right: auto
+        order: 2
+        border: none
+
+  &__Expertise
+    margin: 0 $margin-sm
+    background-color: $secondary
+    border-radius: $border-radius
+    border: $border-width solid $default-shade1
+
+    dt
+      font-weight: $font-weight-semi-bold
+      font-size: $font-size-sm
+      color: $secondary-shade-3
+      margin: $margin-xxsm 0
+
+    dd
+      font-size: $font-size-sm
+      color: $default-shade-1
+      margin: $margin-xxsm 0
+
+    &--section
+      border-bottom: $border-width solid $default-shade1
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      width: 100%
+      margin-top: $margin-smed
+      padding-bottom: $padding-sm
+
+      &:last-of-type
+        border-bottom: none
+
+      @media screen and (max-width: $tablet-sm)
+        flex-direction: column
+
+      .column1
+        width: 30%
+
+      .column2
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: 70%
+
+        @media screen and (max-width: $tablet)
+          width: 100%
+          padding: $padding-xsm
+
+        ul
+          margin: 0
+          padding: 0
+          list-style-type: none // removes bullets from the languages section
+
+        p
+          margin-top: 0
+
+      h2
+        color: $secondary-shade-3
+        margin-left: $margin-lg
+        text-transform: uppercase
+      p
+        padding-right: $margin-md
+        color: $default-shade-1
+
+      li
+        @media screen and (max-width:  $tablet-sm)
+          margin-left: $margin-lg
+      dl
+        margin: 0
+
+        @media screen and (max-width:  $tablet-sm)
+          margin-left: $margin-lg
+
+    @media screen and (max-width: $tablet)
+      flex-direction: column
+      align: center
+      h2
+        margin-left: $margin-sm
+      p
+        margin-left: $margin-md
+      iframe
+        height: auto
+        width: auto
+        @media screen and (max-width:  $tablet-sm)
+          margin: $margin-sm
+
+  &__Insurances
+    margin: 0 1rem
+    background-color: $secondary
+    border-radius: $border-radius
+    border: $border-width solid $default-shade1
+
+    li
+      word-break: break-word
+
+    &--disclaimer
+      display: flex
+      background-color: $default-shade2
+      border-radius: $border-radius
+      align-items: center
+      margin: $margin-md
+      padding: $padding-sm
+
+      @media screen and (max-width: $tablet-sm)
+        flex-direction: column
+
+      i
+        color: $success
+        margin-right: $margin-xsm
+
+      h1
+        color: $success
+        font-size: $font-size-sm
+        font-weight: bold
+        margin: 0
+      p
+        color: $default-shade-1
+        margin-left: $margin-xsm
+
+        @media screen and (max-width:  $phone)
+          flex-direction: column
+          text-align: center
+
+    .hwui-accordion
+      &__icon
+        display: block
+
+      &__hidden
+        .hwui-accordion__title
+          display: block
+          text-align: center
+          color: $primary
+          font-weight: bold
+
+        .hwui-accordion
+          &__content
+            max-height: 0px
+            margin: 0 $margin-md $margin-md $margin-md
+            column-gap: 40px
+            transition: max-height 0.2s ease-in-out
+
+            @media screen and (max-width: $phone)
+              margin: $margin-space
+
+            p
+              color: $default-shade-2
+              font-weight: $font-weight-semi-bold
+
+              ul
+                column-count: 2
+                column-fill: balance
+                margin-bottom: 0
+
+          @media screen and (max-width: $tablet-sm)
+            flex-direction: column
+            align: center
+
+      &__show
+        .hwui-accordion__title
+          display: block
+          text-align: center
+          color: $primary
+          font-weight: bold
+
+        .hwui-accordion
+          &__content
+            max-height: 1000px
+            margin: 0 $margin-md $margin-md $margin-md
+            column-gap: 40px
+            transition: max-height 0.4s ease-in-out
+            @media screen and (max-width: $phone)
+              margin: $margin-space
+
+            p
+              color: $default-shade-2
+              font-weight: $font-weight-semi-bold
+
+            ul
+              column-count: 2
+              column-fill: balance
+              margin-top: 0
+              width: 100%
+              @media screen and (max-width: $phone)
+                padding: 0
+
+          @media screen and (max-width: $tablet-sm)
+            flex-direction: column
+            align: center
+            padding: 0
+
+    &--list
+      margin: $margin-md $margin-md 0 $margin-md
+      column-gap: 40px
+
+      @media screen and (max-width: $tablet-sm)
+        flex-direction: column
+        align: center
+
+      @media screen and (max-width: $phone)
+        margin: $margin-space
+
+      p
+        color: $default-shade-2
+        font-weight: $font-weight-semi-bold
+
+      ul
+        column-count: 2
+        column-fill: balance
+        margin-bottom: 0
+        @media screen and (max-width:  $phone)
+          column-fill: balance-all
+          padding: 0
+
+    &--more
+      display: flex
+      flex-direction: column
+      margin: $margin-lg
+      align-items: center
+
+  .main
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+      display: block
+
+    @media screen and (max-width: $tablet)
+      display: flex
+      flex-direction: column
+
+  .picker
+    display: flex
+    margin: 0 $margin-sm
+    justify-content: space-between
+    border-radius: $border-radius
+
+    @media screen and (max-width: $tablet)
+      margin: $margin-space
+      display: block
+      order: -1
+
+  .calendar
+    flex-grow: 2
+
+    .rbc-month-view
+      border: none
+
+    .rbc-header
+      border: none
+      color: $default-shade1
+      font-size: $font-size-smed
+      font-weight: normal
+
+    .rbc-date-cell
+      align-items: center
+      background: $secondary-shade-3
+      border-radius: $border-radius-round
+      color: $secondary
+      cursor: pointer
+      display: flex
+      height: 60px
+      justify-content: center
+      margin: $margin-xsm
+      padding: 0
+      text-align: center
+      width: 60px
+
+      &.rbc-off-range
+        background: $secondary
+        color: $default
+
+      &.rbc-now
+        background: $success
+
+    .rbc-month-row
+      justify-content: center
+
+    .rbc-month-row + .rbc-month-row
+      border: none
+
+    .rbc-day-bg + .rbc-day-bg
+      border: none
+
+  .slots
+    border-left: $border-width solid $default-shade1
+    padding: $padding-md $padding-lg
+    width: 40%
+    z-index: 1
+
+    .hwui-AppointmentSlot
+      &__slot-container
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+        button
+          flex: 1 1 30%
+          margin: 1ch
+
+          @media screen and (max-width: $phone)
+            padding: 1ch
+
+    @media screen and (max-width: $tablet)
+      border-left: none
+      border-top: $border-width solid $default-shade1
+      width: 100%
+
+    @media screen and (max-width: $tablet)
+      padding: $padding-md
+
+    .hwui-Anchor
+      text-decoration: none
+      font-weight: $font-weight-medium
+      font-size: $font-size-sm
+
+    .hwui-Select
+      margin-bottom: $margin-sm
+
+    .current-date
+      color: $default-shade-1
+      font-size: $font-size-smed
+      margin: 0 0 $margin-md
+      text-align: center
+
+      strong
+        color: $success-shade-3
+        font-weight: $font-weight-bold
+
+    ul
+      align-items: center
+      display: flex
+      flex-direction: row
+      margin-bottom: $margin-sm
+      justify-content: center
+      padding: 0
+
+      li
+        margin: 0 0 $margin-md
+
+        .appointment-slot
+          background: $primary
+          border-radius: $border-radius
+          color: $secondary
+          font-size: $font-size-smed
+          padding: $padding-xsm
+          text-decoration: none
+
+    span
+      font-size: $font-size-xsm
+
+    .message
+      color: $default
+      font-size: $font-size-sm
+      padding: $padding-md
+      text-align: center
+
+  .detail-footer
+    display: flex
+    justify-content: space-between
+    margin: $margin-md $margin-sm
+
+  .key
+
+    ul
+      display: flex
+      justify-content: flex-start
+
+    li
+      margin-right: $margin-md
+
+    li:before
+      background: $secondary-shade-1
+      border-radius: $border-radius
+      content: ''
+      display: inline-block
+      height: 17px
+      margin-right: $margin-sm
+      vertical-align: middle
+      width: 17px
+
+  .back-button
+    border: none
+    color: $primary
+    font-size: $font-size-md
+    padding-left: 0
+
+    &:before
+      @extend .fa
+      content: $fa-var-angle-left
+      margin-right: $margin-sm
+
+.hw-calendar
+  width: 100%
+
+  .header-cell, .body-cell
+    flex: 0 0 14.28%
+    outline: none
+    padding: $padding-sm
+    text-align: center
+    .date-number
+      align-items: center
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+      flex: 0 0 9.6%
+
+    @media screen and (max-width: $phone)
+      padding: 0
+
+  .controls
+    align-items: center
+    border-bottom: $border-width solid $default-shade1
+    color: $primary
+    display: flex
+    justify-content: space-between
+    outline: none
+    padding: $padding-sm
+
+    @media screen and (max-width: $tablet)
+      border: none
+      margin-top: $margin-xsm
+
+    @media screen and (max-width: $phone)
+      padding: $padding-xxsm
+      margin-top: $margin-xxsm
+
+    button
+      background: transparent
+      border: none
+      cursor: pointer
+      display: block
+      outline: none
+      &:disabled
+        cursor: not-allowed
+
+      i
+        font-size: 36px
+        color: $primary
+
+      @media screen and (max-width: $phone)
+        padding: $padding-xxsm
+
+    .month-title
+      font-size: $font-size-md
+      text-align: center
+
+      @media screen and (max-width: $phone)
+        font-size: $font-size-smed
+
+    .month-name
+      display: block
+      font-weight: $font-weight-bold
+
+    .month-year
+      color: $default-shade-1
+      display: block
+      font-size: $font-size-xsm
+
+  .header
+    background: $default-shade2
+    border-bottom: $border-width solid $default-shade1
+    display: flex
+    justify-content: space-between
+
+  .day-label
+    color: $success-shade-3
+    font-size: $font-size-smed
+    font-weight: $font-weight-bold
+
+    &:not(:first-child)
+
+      @media screen and (max-width: $tablet)
+        border: none
+
+    @media screen and (max-width: $tablet-sm)
+      font-size: $font-size-mobile-md
+
+  .body
+    @media screen and (max-width: $phone)
+      padding: 0
+
+  .body-row
+    display: flex
+    justify-content: space-between
+
+    @media screen and (max-width: $tablet)
+      border: none
+
+  .body-cell
+    color: $primary
+    font-size: $font-size-md
+    position: relative
+
+    &:not(:first-child)
+
+      @media screen and (max-width: $tablet)
+        border: none
+
+    @media screen and (max-width: $phone)
+      font-size: $font-size-smed
+
+    span
+      &:focus
+        outline: none
+
+    &:after
+      content: ''
+      display: block
+      padding-bottom: 100%
+
+    .date-number
+      border-radius: 50%
+      display: flex
+      height: 100%
+      align-items: center
+      justify-content: center
+      left: 0
+      padding: $padding-md $padding-sm
+      position: absolute
+      top: 0
+      transition: background 0.2s
+      width: 100%
+      color: $default-shade1
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+        display: block
+
+      @media screen and (max-width: $phone)
+        padding: 0
+
+    &.prev-month-day
+      color: $default-shade1
+
+    &.prev-month-day, &.next-month-day
+      font-weight: normal
+
+    &.current-day
+      .date-number
+        outline: none
+        justify-content: center
+    &.has-events
+      &:hover
+        background: $success-shade2
+        cursor: pointer
+        border-radius: $border-radius
+
+      .date-number
+        flex-flow: column
+        justify-content: center
+        outline: none
+        color: $secondary-shade-3
+
+    &.selected.has-events
+      background: $success
+      cursor: auto
+      border-radius: $border-radius
+      .date-number
+        color: $secondary
+        border: none
+        outline: none
+        justify-content: center

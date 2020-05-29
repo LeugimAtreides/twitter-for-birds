@@ -1,0 +1,55 @@
+@import "../../../style-variables/_colors"
+@import "../../../style-variables/_sizes"
+@import "../../../style-variables/_utils"
+
+.hwui-RegisterForm
+
+  &__contact-message
+    font-size: $font-size-xsm
+
+  .hwui-ProfilePicker
+    &__nav
+      padding: 0
+
+  .hwui-Form
+    display: flex
+    flex-flow: row
+    justify-content: center
+
+    .button-wrapper
+      text-align: center
+      @media screen and (max-width: $tablet)
+        margin-bottom: $margin-xxxlg
+
+    .hwui-Button
+      padding: $padding-sm
+      min-width: 25%
+
+      @media screen and (max-width: $phone)
+        width: 100%
+
+    @media screen and (max-width: $desktop)
+      display: flex
+      flex-flow: column wrap
+
+    main
+      @extend %desktop-width
+
+      h3
+        color: $success-shade-3
+        margin: $margin-md 0
+        text-align: center
+
+      @media screen and (max-width: $desktop)
+        width: 90%
+
+      .hwui-Card
+        display: block
+        margin: $margin-sm 0
+        padding: $padding-sm
+        border-radius: $border-radius
+
+        .hwui-Select
+
+          select
+            text-indent: 1rem

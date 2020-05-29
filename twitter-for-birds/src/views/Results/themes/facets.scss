@@ -1,0 +1,63 @@
+@import "../../../../node_modules/@fortawesome/fontawesome-pro/scss/_variables";
+@import "../../../style-variables/_colors";
+@import "../../../style-variables/_utils";
+@import "../../../style-variables/_sizes";
+
+.resultFacets {
+    &__Affiliations,
+    &__Gender,
+    &__Language,
+    &__Availability,
+    &__New,
+    &__Age {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $margin-smed;
+
+        .hwui-Radio {
+            &:first-of-type {
+                margin-top: $margin-xsm;
+            }
+        }
+  
+        .hwui-Checkbox {
+            margin-top: $margin-sm;
+            &:first-of-type {
+                margin-top: $margin-xsm;
+            }
+        }
+
+        .hwui-accordion {
+            .hwui-Checkbox {
+                margin-left: $margin-xxsm;
+            }
+    
+            .hwui-accordion__content {
+                flex-direction: column;
+                max-height: 2000px;
+
+                .hwui-Checkbox {
+                    margin-top: $margin-xsm;
+                }
+            }
+    
+            &__hidden {
+                .hwui-accordion__content {
+                    max-height: 0;
+                }
+            }
+        }
+    
+        .hwui-Select {
+            margin: $margin-xsm 0 0 0;
+        }
+    
+        > .hwui-Label {
+            font-weight: $font-weight-semi-bold;
+            color: $primary-shade-2;
+            text-transform: capitalize;
+            margin-bottom: $margin-xxsm;
+        }
+
+    }
+}

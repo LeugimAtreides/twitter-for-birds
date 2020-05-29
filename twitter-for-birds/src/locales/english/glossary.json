@@ -1,0 +1,8 @@
+{
+  "search-typeahead-placeholder": "Condition, specialty, or Doctor name...",
+  "search-location-placeholder": "Zipcode or City",
+  "search-insurance-placeholder": "Insurance Carrier of Plan",
+  "search-insurance-selfpay": "I'm paying for myself",
+  "search-insurance-later": "I'll choose my insurance plan later",
+  "search-reason-placeholder": "Reason for visit"
+}

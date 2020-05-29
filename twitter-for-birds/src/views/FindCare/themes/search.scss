@@ -1,0 +1,180 @@
+@import "../../../style-variables/_sizes.sass";
+@import "../../../style-variables/_utils.sass";
+@import "../../../style-variables/_colors.sass";
+
+.findCare-Search {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: 0;
+    margin-bottom: $margin-lg;
+
+    &__provider {
+        align-items: center;
+        display: flex;
+    }
+
+    &--info {
+        display: flex;
+        flex-direction: column;
+        p {
+            margin: 0;
+        }
+    }
+
+    &__sub-title {
+        font-size: $font-size-xsm;
+    }
+
+    &__specialty {
+        margin: $margin-space 0;
+        font-size: $font-size-xsm;
+    }
+
+    &__initials {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        i {
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            background: $primary;
+            color: $secondary;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-medium;
+            border-radius: $border-radius-circle;
+            outline: none;
+            margin-right: $margin-xsm;
+        
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-style: normal;
+            }
+        }
+    }
+
+    &__photo {
+        border-radius: $border-radius-round;
+        height: 50px;
+        margin-right: $margin-xsm;
+        overflow: hidden;
+        width: 50px;
+        min-width: 50px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__Input {
+        display: flex;
+        margin: 0 -#{$margin-xsm};
+
+        > div {
+            flex: 1 0;
+            margin-right: $margin-md;
+            margin-left: $margin-xsm;
+        }
+
+        @media screen and (max-width: $tablet-sm){
+            display: block;
+            margin: 0;
+
+            > div {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+        .hwui-FormInput,
+        .hwui-FormTextArea,
+        .hwui-Select__container {
+            margin-right: $margin-smed;
+    
+            .hwui-Select {
+                width: 21.9rem;
+    
+                @media screen and (max-width: $tablet-sm){
+                    width: 100%;
+                }
+    
+                select {
+                    color: $text
+                }
+            }
+        }
+    
+        .hwui-Button {
+            height: 46px;
+            width: 9rem;
+    
+            @media screen and (max-width: $tablet-sm){
+                width: 100%
+            }
+        }
+    
+        .hwui-GeoLocation {
+            .hwui-FormInput {
+                width: 9rem;
+        
+                @media screen and (max-width: $tablet-sm) {
+                    width: 80%;
+                }
+        
+                input {
+                    width: 100%;
+                    color: $text;
+                    padding: 0 $padding-md + 6px;
+    
+                }
+        
+                &__icon {
+                    color: $input-icon-color;
+                    font-size: $font-size-sm;
+                    margin-left: 1px;
+                }
+            }
+        }
+
+        .hwui-Typeahead {
+            .hwui-FormInput {
+                width: 37rem;
+                margin-right: $margin-lg - 2px;
+    
+                @media screen and (max-width: $tablet-sm){
+                    width: 80%;
+                }
+    
+                input {
+                    width: 100%;
+                    padding: 0 $padding-md + 6px;
+                }
+                
+                &__icon {
+                    color: $input-icon-color;
+                    font-size: $font-size-sm;
+                    margin-left: 2px;
+                }
+            }
+    
+            &__list {
+                max-height: 500px;
+                overflow-y: scroll;
+                width: calc(100% + #{$border-width * 66});
+                top: calc(#{$input-height} - #{$border-width * 2});
+
+                ul {
+                    list-style-type: none;
+                    padding: 0 $padding-sm 0 $padding-sm;
+                }
+            }
+        }
+    }
+}
